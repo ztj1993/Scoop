@@ -1021,6 +1021,7 @@ function show_app($app, $bucket, $version) {
 }
 
 function is_scoop_outdated() {
+    return $false
     $now = [System.DateTime]::Now
     try {
         $expireHour = (New-TimeSpan (get_config LAST_UPDATE) $now).TotalHours
